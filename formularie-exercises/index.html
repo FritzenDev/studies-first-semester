@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <!--Formulário para enviar seu nome (Ex1)-->
+    <div class="form1">
+        <h3>Envie seu nome</h3>
+        <form method="get">
+            <label for="fname">Nome: </label>
+            <input type="text" name="fname" id="fname" required>
+            <button type="submit" id="f1">Enviar</button>
+        </form><br>
+    </div>
+    <!--Formulário com checkbox (Ex2)-->
+    <div class="form2">
+        <h3>Escolha uma opção</h3>
+        <form method="get">
+            <input type="checkbox" name="sport" id="sport">
+            <label for="sport">Esportes</label><br>
+            <input type="checkbox" name="music" id="music">
+            <label for="music">Música</label><br>
+            <input type="checkbox" name="art" id="art">
+            <label for="art">Arte</label><br>
+            <button type="submit" id="f2">Enviar</button>
+        </form>
+    </div>
+    <!--Data de nascimento (Ex3)-->
+    <div class="form3">
+        <h3>Data de nascimento</h3>
+        <form method="get">
+            <input type="date" name="" id="">
+            <button type="submit" id="f3">Enviar</button>
+        </form>
+    </div>
+    <!--E-mail validado e senha (Ex4 & Ex5)-->
+    <div class="form4-5">
+        <h3>Digite seu e-mail</h3>
+        <form method="get">
+            <label for="f4email">Email: </label>
+            <input type="email" name="f4email" id="f4email"><br>
+            <label for="f4senha">Senha: </label>
+            <input type="password" name="f4senha" id="f4senha">
+            <button type="submit" id="f4">Enviar</button>
+        </form>
+    </div>
+    <!--Campo de número (Ex 6)-->
+    <div class="form6">
+        <h3>Digite um número de 1 a 10</h3>
+        <form method="get">
+            <input type="number" name="nf6" id="nf6" min="0" max="10">
+            <button type="submit" id="f6">Enviar</button>
+        </form>
+    </div>
+    <!--Upload de arquivo (Ex 7)-->
+    <div class="form7">
+        <h3>Upload de arquivo</h3>
+        <form method="get">
+            <input type="file" name="file7" id="file7"><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <!--Caixa de texto (Ex8)-->
+    <div class="form8">
+        <h3>Digite qualquer coisa</h3>
+        <form method="get">
+            <textarea name="form8txt" id="f8txt" cols="30" rows="10">
+            </textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <!--Formulário de Registro (Ex9)-->
+    <div class="form9">
+        <h3>Registre-se</h3>
+        <form method="post">
+            <!--Nome, email e senha-->
+            <label for="f9name">Nome: </label>
+            <input type="text" name="f9name" id="f9name"><br>
+            <label for="f9email">Email: </label>
+            <input type="email" name="f9email" id="f9email"><br>
+            <label for="f9password">Senha: </label>
+            <input type="password" name="f9password" id="f9password" minlength="8"><br>
+            <!--Escolha de gênero-->
+            <input type="radio" name="genero" id="f9genderM" value="f9genderM">
+            <label for="f9genderM">Masculino</label><br>
+            <input type="radio" name="genero" id="f9genderF" value="f9genderF">
+            <label for="f9genderF">Feminino</label><br>
+            <input type="radio" name="genero" id="f9genderO" value="f9genderO">
+            <label for="f9genderO">Não-binário</label><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <!--Formulário de cadastro POST (Ex10)-->
+    <div class="form10">
+        <h3>Cadastre-se</h3>
+        <form method="post">
+            <label for="f10name">Nome: </label>
+            <input type="text" name="f10name" id="f10name"><br>
+            <label for="f10sname">Sobrenome: </label>
+            <input type="text" name="f10sname" id="f10sname"><br>
+            <label for="f10email">Email: </label>
+            <input type="email" name="f10email" id="f10email"><br>
+            <label for="f10password">Senha: </label>
+            <input type="password" name="f10password" id="f10password" minlength="8"><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <!--Formulário para contato Ex(11)-->
+    <div class="form11">
+        <h3>Contate-nos</h3>
+        <form method="get">
+            <label for="f11name">Nome: </label>
+            <input type="text" name="f11name" id="f11name" placeholder="Digite seu nome" pattern="[a-z\s]+$"><br>
+            <label for="f11sname">Sobrenome: </label>
+            <input type="text" name="f11sname" id="f11sname" placeholder="Digite seu sobrenome" pattern="[a-z\s]+$"><br>
+            <label for="f11email">Email: </label>
+            <input type="email" name="f11email" id="f11email" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
+            <label for="f11tel">Telefone: </label>
+            <input type="tel" name="f11tel" id="f11tel" placeholder="(00) 00000-0000" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$"><br>
+            <textarea name="f11txta" id="f11txta" cols="50" rows="20"></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <!--Formulário para escolha de pizza (Ex12)-->
+    <div class="form12">
+        <h3>Peça sua pizza</h3>
+        <form method="get">
+            <label for="f12name">Nome: </label>
+            <input type="text" name="f12name" id="f12name"><br>
+            <label for="f11tel">Telefone: </label>
+            <input type="tel" name="f11tel" id="f11tel" placeholder="(00) 00000-0000" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$"><br>
+            <label for="f12adress">Digite seu endereço: </label>
+            <input type="text" style="width: 250px;" name="f12adress" id="f12adress"><br>
+            <!--Escolha de pizza-->
+            <h4>Escolha a pizza:</h4>
+            <select name="Plist" id="Plist">
+                <option value="">Selecione o tamanho</option>
+                <option value="p">Pequena</option>
+                <option value="m">Média</option>
+                <option value="g">Grande</option>
+                <option value="f">Família</option>
+            </select><br><br>
+            <input type="checkbox" name="frango" id="frango">
+            <label for="frango">Frango</label><br>
+            <input type="checkbox" name="carne" id="carne">
+            <label for="carne">Carne</label><br>
+            <input type="checkbox" name="cora" id="cora">
+            <label for="cora">Coração</label><br>
+            <input type="checkbox" name="portuguesa" id="portuguesa">
+            <label for="portuguesa">Portuguesa</label><br>
+            <input type="checkbox" name="cala" id="cala">
+            <label for="cala">Calabresa</label><br>
+            <input type="radio" name="borda" id="bS" value="bS">
+            <label for="bS">Com borda</label><br>
+            <input type="radio" name="borda" id="bN" value="bN">
+            <label for="bN">Sem borda</label><br>
+            <textarea name="obs" id="obsf12" cols="30" rows="10" placeholder="Deixe sua observação"></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
