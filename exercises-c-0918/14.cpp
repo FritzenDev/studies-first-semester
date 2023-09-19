@@ -2,14 +2,14 @@
 #include <locale.h>
 
 /*
-Um posto est· vendendo combustÌveis com a seguinte tabela de
-descontos: - ¡lcool: atÈ 20 litros, desconto de 3% por litro - acima de
-20 litros, desconto de 5% por litro - Gasolina: atÈ 20 litros, desconto de
-4% por litro - acima de 20 litros, desconto de 6% por litro FaÁa um
-algoritmo que leia o n˙mero de litros vendidos, o tipo de combustÌvel
-(codificado da seguinte forma: A - ·lcool, G - gasolina), calcule e
-imprima o valor a ser pago pelo cliente sabendo-se que o preÁo do
-litro da gasolina È R$ 6,50 o preÁo do litro do ·lcool È R$6,00.
+Um posto est√° vendendo combust√≠veis com a seguinte tabela de
+descontos: - √Ålcool: at√© 20 litros, desconto de 3% por litro - acima de
+20 litros, desconto de 5% por litro - Gasolina: at√© 20 litros, desconto de
+4% por litro - acima de 20 litros, desconto de 6% por litro Fa√ßa um
+algoritmo que leia o n√∫mero de litros vendidos, o tipo de combust√≠vel
+(codificado da seguinte forma: A - √°lcool, G - gasolina), calcule e
+imprima o valor a ser pago pelo cliente sabendo-se que o pre√ßo do
+litro da gasolina √© R$ 6,50 o pre√ßo do litro do √°lcool √© R$6,00.
 */
 
 int main () {
@@ -18,52 +18,45 @@ int main () {
 	char continuar;
 	
 	do {
-		float L, d3, calc1, d5, calc2, d4, calc3, d6, calc4, calcF, calcF2;
+		float L, calc1, calc2, calc3, calc4;
 		const float gP = 6.50, aP = 6.00;
-		char tipo[1];
+		char tipo;
 		
 		printf("Digite a quantidade de litros: ");
-		scanf("%f", &L);
-		
-		printf("Digite o tipo de combustÌvel (A = ¡lcool) e (G = Gasolina): ");
-		scanf("%c", &tipo);
-		
-		calcF = gP * L;
-		calcF2 = aP * L; 
-		
-		d3 = calcF * 0.03;
-		calc1 = calcF - d3;
-		
-		d5 = calcF * 0.05;
-		calc2 = calcF - d5;
-		
-		d4 = calcF2 * 0.04;
-		calc3 = calcF2 - d4;
-		
-		d6 = calcF2 * 0.06;
-		calc4 = calcF2 - d6;
-		
-		if (tipo == "A" || tipo == "a") {
-			if (L <= 20){
-			printf("O valor final sobre um desconto de 3% ser· de: %.2f", calc1);
-		    }
-		}
-		if (tipo == "A" || tipo == "a") {
-			if (L > 20) {
-			printf("O valor final sobre um desconto de 5% ser· de: %.2f", calc2);
-		    }
-		}
-		if (tipo == "G" || tipo == "g") {
-			if (L <= 20) {
-			printf("O valor final sobre um desconto de 4% ser· de: %.2f", calc3);
-			}
-		}
-		if (tipo == "G" || tipo == "g") {
-			if (L > 20) {
-			printf("O valor final sobre um desconto de 6% ser· de: %.2f", calc4);
-			}
-		}
+        scanf("%f", &L);
 
+        printf("Digite o tipo de combust√≠vel (A = √Ålcool, G = Gasolina): ");
+        scanf(" %c", &tipo);
+        
+        //3% de desconto gasolina
+        calc1 = L * aP * 0.97;
+        
+        //5% de desconto gasolina
+        calc2 = L * aP * 0.95;
+        
+        //4% de desconto √°lcool
+        calc3 = L * gP * 0.96;
+        
+        //6% de desconto √°lcool
+        calc4 = L * gP * 0.94;
+        
+        //Gasolina
+		if (tipo == 'A' || tipo == 'a') {
+			if (L <= 20) {
+				printf("O valor final com 3%% de desconto ser√° de: R$ %.2f\n", calc1);
+			} else {
+                printf("O valor final com 5%% de desconto ser√° de: R$ %.2f\n", calc2);
+            }
+		}
+		else if (tipo == 'G' || tipo == 'g') {
+            if (L <= 20) {
+                printf("O valor final com 4%% de desconto ser√° de: R$ %.2f\n", calc3);
+            } else {
+                printf("O valor final com 6%% de desconto ser√° de: R$ %.2f\n", calc4);
+            }
+        } else {
+            printf("Tipo de combust√≠vel inv√°lido.\n");
+        }
 		
 	
 	    scanf("%s", &continuar);
@@ -71,5 +64,3 @@ int main () {
 	
 	return 0;
 }
-
-
