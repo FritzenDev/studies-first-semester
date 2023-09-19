@@ -1,0 +1,114 @@
+/* Atividade 1 - Mudar a cor de fundo */
+body {
+    background: #1A183B;
+    padding: 20px;
+}
+/**/
+
+.container {
+    text-align: center;
+    color: white;
+    border: solid;
+    border-width: 2px;
+    width: fit-content;
+}
+
+/* Atividade 2 - Mudar a cor de um título */
+.lista {
+    color: white;
+}
+/**/
+
+.lista h1 {
+    text-align: center;
+}
+
+.lista li {
+    color: rgba(217, 255, 3, 0.993);
+    padding: 10px;
+}
+
+.google {
+    padding-top: 10px;
+}
+
+.google a {
+    text-decoration: solid;
+    color: rgb(0, 255, 0);
+}
+
+.img5 img {
+    padding-top: 10px;
+    width: 200px;
+    border-radius: 40%;
+}
+
+.tabela6 {
+    color: white;
+    padding-top: 10px;
+}
+
+.tabela6 table {
+    border: solid;
+    border-color: blue;
+    border-width: 3px;
+}
+
+.tabela6 td {
+    border: solid;
+    border-color: yellow;
+    border-width: 1px;
+}
+
+.form9 {
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.form9 input {
+    width: 250px;
+    height: 20px;
+    margin: 10px;
+}
+
+.form9 h3 {
+    text-align: center;
+}
+
+.form9 input[type="button"] {
+    cursor: pointer;
+    border: solid;
+    border-width: 1px;
+    height: 30px;
+    width: 60px;
+    color: white;
+    background-color: rgb(24, 80, 99);
+}
+
+.txt9 {
+    border: solid;
+    border-color: white;
+    color: aqua;
+    margin-top: 50px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.class10 {
+    background-color: wheat;
+    border: solid;
+    border-color: white;
+    font-family: fantasy;
+    color: purple;
+    margin-top: 50px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 4px 4px 10px black;
+    font-size: 30px;
+}
