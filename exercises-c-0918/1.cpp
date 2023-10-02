@@ -2,8 +2,8 @@
 #include <locale.h>
 
 /*
-Faça um algoritmo que lê um número e verificar se ele é par ou é
-ímpar. 
+FaÃ§a um algoritmo que lÃª um nÃºmero e verificar se ele Ã© par ou Ã©
+Ã­mpar. 
 */
 
 int main () {
@@ -14,14 +14,14 @@ int main () {
 	do {
 		int num;
 		
-		printf("Digite seu número: ");
+		printf("Digite seu nÃºmero: ");
 		scanf("%i", &num);
 		
-		if (num 2==0) {
-			printf("%i é par\n", num);
+		if (num % 2==0) {
+			printf("%i Ã© par\n", num);
 		}
 		else {
-			printf("%i é impar\n", num);
+			printf("%i Ã© impar\n", num);
 		} 
 	
 	    scanf("%s", &continuar);
@@ -29,5 +29,3 @@ int main () {
 	
 	return 0;
 }
-
-
